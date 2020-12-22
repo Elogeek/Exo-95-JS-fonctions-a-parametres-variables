@@ -1,19 +1,28 @@
-let result = document.createElement('p');
-document.body.appendChild(result);
+let array1 = ['world ', ' la classe', ' les geeks'];
 function bonjour(myName) {
-     result.innerHTML = "hello "
-    for(let name of myName) {
-        result.innerHTML += name + " , ";
-    }
-    result.innerHTML = result.innerHTML.trim().slice(0, -1);
+    return bonjour.join(" ,");
 }
+document.getElementById('para1').innerHTML += "Bonjour " + array1;
+array1.push(" les fleurs"," l'univers");
+document.getElementById('para2').innerHTML +=  "Bonjour " + array1;
 
-bonjour('world', 'la classe', 'les geeks');
-bonjour('le monde', 'les amis', 'la famille');
-
-//fonction Math()
-let resultat = document.getElementById('result');
+//exo 2
+let result = document.createElement('div');
+document.body.appendChild(result);
 let table1 = [2, 4, 6, 8];
-let table2 = [1, 3, 5, 7];
-let mini = Math.min(table1, table2);
-resultat.innerHTML = mini.toString();
+let table2 = [10, 10, 10, 10];
+let add = (table1[0] + table2[0]);
+let add1 = table1[1] + table2[1];
+let add2 = table1[2] + table2[2];
+let add3 = table1[3] + table2[3];
+result.innerHTML =  add.toString() + " " + add1.toString() + " "+ add2 + " " + add3;
+
+
+// exo 3
+
+let multiplication = 11.76
+let multi = (table2[0] * multiplication);
+document.getElementById('para3').innerHTML = Math.trunc(multi).toString() + " ";
+
+let multi2 = (table1[3] * multiplication);
+document.getElementById('para3').innerHTML += Math.trunc(multi2).toString();
